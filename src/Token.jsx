@@ -1,6 +1,6 @@
 const Token = () => {
     return(
-        <div></div>
+        <div>토큰임</div>
     )
 }
 

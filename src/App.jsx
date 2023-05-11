@@ -1,13 +1,9 @@
-const App = () => {
-  const handleAuthClick =() => {
-      const API_KEY = ""
-  }
+import Router from "./Router";
 
+const App = () => {
 return (
   <div className="App">
-      안녕하세요
-
-      <button onClick={handleAuthClick}>버튼 인증</button>
+    <Router/>
   </div>
 );
 }

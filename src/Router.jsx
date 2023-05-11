@@ -2,18 +2,16 @@ import { Routes, Route } from "react-router-dom";
 
 
 // Components
-import App from "./App"
-import Token from "./Token"
+import Login from "./Loign.jsx"
+import Token from "./Token.jsx"
 
 const Router = () => {
     return (
-      <>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/auth/callback" element={<Token/>} />
-          </Routes>
-      </>
+    <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/auth/callback" element={<Token/>} />
+    </Routes>
     );
-  };
+};
   
   export default Router;
