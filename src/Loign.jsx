@@ -8,9 +8,7 @@ const Login = () => {
     const encode_csrf_token = "asddada"
     const url =  `https://${mall_id}.cafe24api.com/api/v2/oauth/authorize?response_type=code&client_id=${client_id}&state=${encode_csrf_token}&redirect_uri=${encode_redirect_uri}&scope=${scope}`
     const handleAuthClick = async() => {
-      const data = await fetch(url, {
-        method:"POST"
-      })
+      const data = await fetch(url)
       const json = await data.json();
       console.log(json)
     }
