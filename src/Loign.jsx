@@ -1,6 +1,7 @@
-
+import {useNavigate} from "react-router-dom"
 
 const Login = () => {
+    const path = useNavigate();
     const mall_id = process.env.MALL_ID || "whitecandy777"
     const client_id = process.env.CLIENT_ID || "p53jdXVUGVvvP2dVRZS9RD"
     const scope = process.env.SCOPE || "mall.read_category,mall.write_category"
@@ -11,6 +12,7 @@ const Login = () => {
       const data = await fetch(url)
       const json = await data.json();
       console.log(json)
+      path("/auth/callback")
     }
     return(
         <div>
